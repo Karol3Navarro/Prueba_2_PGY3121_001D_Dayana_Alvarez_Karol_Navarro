@@ -278,6 +278,18 @@ function buscarProducto() {
     }
 }
 
+//Funcion de Login
+function login(){
+	var usuario=document.getElementById("username").value;
+	var clave=document.getElementById("password").value;
+
+	if(usuario== "popsipatitas@gmail.com" &&clave=="1234"){
+		alert("Usuario correcto");
+	}else{
+		alert("Usuario incorrecto");
+	}
+};
+
 
 
 
