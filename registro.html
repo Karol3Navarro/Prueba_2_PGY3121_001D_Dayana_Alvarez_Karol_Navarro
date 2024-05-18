@@ -43,18 +43,20 @@
                                 <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
                             </div>
                             <button type="submit" class="btn btn-primary btn-secondary" onclick="login()">Iniciar sesión</button><br>
-                            <a href="registro.html"type="submit" class="btn btn-primary btn-secondary">Registro</a>
+                            <a href="registro.html"type="submit" class="btn btn-primary btn-secondary">Registrar</a>
                         </form>
                     </div>
                 </div>
-                
+
                 <!--Carrito de compras -->
                 <div class="container-icon">
-                    <div class="container-cart-icon">
+                    <div class="container-cart-icon position-relative">
                         <div class="carrito"> 
                             <button class="carrito navbar-toggler d-lg-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                                <img src="img/carrito-de-compras.gif" alt="" width="30" height="30">
+                                <img src="img/carrito-de-compras.gif" alt="Carrito de compras" width="30" height="30">
                             </button>
+                            <!-- Elemento para mostrar la cantidad de productos -->
+                            <span id="cantidad-productos" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
                         </div>
                     </div>
                 </div>
@@ -85,7 +87,7 @@
                                 <img src="img/animales (1).png" alt="Adornos" style="height: 20px; margin-right: 5px;">Accesorios
                             </a>
                             <ul class="dropdown-menu" style="background-color:#7888AF;">
-                                <li><a class="dropdown-item" href="Nuevo_bandana.html" style="color: white;">Bandana</a></li>
+                                <li><a class="dropdown-item" href="bandana.html" style="color: white;">Bandana</a></li>
                                 <li><a class="dropdown-item" href="correa.html" style="color: white;">Correas</a></li>
                                 <li><a class="dropdown-item" href="identificacion.html" style="color: white;">Identificaciones</a></li>
                             </ul>
@@ -132,7 +134,6 @@
                 </div>
             </div>
             <p class="cart-empty">El carrito está vacío</p>
-
         </div>
 
         <!-- Modal -->
