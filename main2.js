@@ -66,11 +66,6 @@ $(document).ready(function(){
             alert("El Nombre y Apellido deben tener entre 3 y 20 caracteres.");
             return;
         }   
-        
-        if(region === ""){
-            alert("Por favor, seleccione un archivo.");
-            return;
-        }
 
         // Celular: largo entre 9 y 12 caracteres
         if(celular.length < 9 || celular.length > 12){
