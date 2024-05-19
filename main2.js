@@ -161,15 +161,15 @@ $(document).ready(function(){
             return;
         }
         if(fecha_ini === ""){
-            alert("Por favor, seleccione un archivo.");
+            alert("Por favor, Poner la fecha.");
             return;
         }
         if(opcion === ""){
-            alert("Por favor, seleccione un motivo.");
+            alert("Por favor, una opcion.");
             return;
         }
         if(mascota.length < 3 || mascota.length > 100){
-            alert("El Descripción debe tener entre 3 y 100 caracteres.");
+            alert("Poner el nombre de la mascota");
             return;
         }
 
