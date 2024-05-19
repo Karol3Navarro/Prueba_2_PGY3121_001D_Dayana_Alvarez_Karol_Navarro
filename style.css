@@ -15,6 +15,12 @@
     margin-top: 20px;
     margin-bottom: 10px;
 }
+.contendorBoton2{
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+    margin-bottom: -50px;
+}
 .btnCarritoLogin{
     display: flex;
     margin-right: 60px;
