@@ -12,11 +12,7 @@
     <!--Barra principal-->
     <header> 
         <div class="contendorBoton">
-            <!--Lupa-->
-            <div class="btnBuscar">
-                <img src="img/lupa.gif" alt="Lupa" id="lupa" width="30" height="30">
-                <input type="text" class="search-input" placeholder="¿Qué quieres buscar?">
-            </div>
+          
             <!--Logo-->
             <div class="logo">
                 <center>
@@ -41,12 +37,11 @@
                                 <label for="password" class="form-label">Contraseña</label>
                                 <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
                             </div>
-                            <button type="submit" class="btn btn-primary btn-secondary" onclick="login()">Iniciar sesión</button><br>
-                            <a href="registro.html"type="submit" class="btn btn-primary btn-secondary">Registrar</a>
+                            <button type="submit" class="btn btn-primary btn-secondary">Iniciar sesión</button>
                         </form>
                     </div>
                 </div>
-
+                
                 <!--Carrito de compras -->
                 <div class="container-icon">
                     <div class="container-cart-icon position-relative">
@@ -59,6 +54,7 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
 
@@ -86,7 +82,7 @@
                                 <img src="img/animales (1).png" alt="Adornos" style="height: 20px; margin-right: 5px;">Accesorios
                             </a>
                             <ul class="dropdown-menu" style="background-color:#7888AF;">
-                                <li><a class="dropdown-item" href="bandana.html" style="color: white;">Bandana</a></li>
+                                <li><a class="dropdown-item" href="Nuevo_bandana.html" style="color: white;">Bandana</a></li>
                                 <li><a class="dropdown-item" href="correa.html" style="color: white;">Correas</a></li>
                                 <li><a class="dropdown-item" href="identificacion.html" style="color: white;">Identificaciones</a></li>
                             </ul>
@@ -116,6 +112,8 @@
                 <div class="row-product hidden">
                     <div class="cart-product">
                         <div class="info-cart-product">
+                            <div class="contador">
+                               
                             <span class="cantidad-producto-carrito">1</span>
                             <p class="titulo-producto-carrito">Bandana Black Sheep</p>
                             <span class="precio-producto-carrito">$6.390</span>
@@ -124,7 +122,7 @@
                 </div>
                 <div class="cart-total hidden">
                     <h3>Total:</h3>
-                    <span class="total-pagar">$200</span>
+                    <span class="total-pagar"></span>
                     <div class="d-grid gap-2 col-6 mx-auto">
                         <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Finalizar compra
@@ -133,6 +131,7 @@
                 </div>
             </div>
             <p class="cart-empty">El carrito está vacío</p>
+
         </div>
 
         <!-- Modal -->
@@ -154,171 +153,160 @@
             </div>
         </div>
     </header>
-
     <main>
+        <div class="filtros" >
+            <h3>Filtros</h3>
+            <div class="botones">
+                       <!--Lupa-->
+            <div class="btnBuscar">
+                <button onclick="buscarProducto2()">
+                    <img src="img/lupa.gif" alt="Lupa" width="30" height="30">
+                </button>
+                <input type="text" class="search-input" placeholder="¿Qué quieres buscar?">
+            </div>
+                <button id="btnOrdenar" class="btn btn-primary mb-2" onclick="ordenarPorPrecio()">Ordenar por precio</button>
+                <button id="btnOrdenarAlfabeticamente" class="btn btn-primary mb-2" onclick="ordenarAlfabeticamente()">Ordenar alfabéticamente</button> 
+            </div>
+        </div>
         <h2 style="text-align: center;">Identificaciones</h2>
-        <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner">
-                <!--Carrusel 1-->
-                <div class="carousel-item active">
-                    <div class="carruselCard">
+        
+        <div class="container-items" id="product-container">
                         <!--Card 1-->
                         <div class="card Ccard" style="width: 14rem;">
                             <img class="card-img-top" src="img/Productos/Placa Identificacion Huella Azul.webp" alt="Card image cap">
-                            <div class="card-body">
+                            <div class="info-product">
                                 <h5 class="card-title">Placa identificación huella azul</h5>
-                                <p class="card-text">$11.990</p>
-                                <a href="#" class="btn btn-primary">Ver opciones</a>
+                                <p class="price card-text">$11.990</p>
+                                <button class="btn-add-cart btn btn-primary">Añadir al carrito</button>
                             </div>
                         </div>
                         <!--Card 2-->
                         <div class="card Ccard" style="width: 14rem;">
                             <img class="card-img-top" src="img/Productos/Placa identificación slide-on plateada hueso.webp" alt="Card image cap">
-                            <div class="card-body">
+                            <div class="info-product">
                                 <h5 class="card-title">Placa identificación slide-on plateada hueso</h5>
-                                <p class="card-text">$11.490</p>
-                                <a href="#" class="btn btn-primary">Ver opciones</a>
+                                <p class="price card-text">$11.490</p>
+                                <button class="btn-add-cart btn btn-primary">Añadir al carrito</button>
                             </div>
                         </div>
                         <!--Card 3-->
                         <div class="card Ccard" style="width: 14rem;">
                             <img class="card-img-top" src="img/Productos/Placaidentificacionhuesodorado_1024x1024@2x.webp" alt="Card image cap">
-                            <div class="card-body">
+                            <div class="info-product">
                                 <h5 class="card-title">Placa identificación hueso dorado</h5>
-                                <p class="card-text">$9.990</p>
-                                <a href="#" class="btn btn-primary">Ver opciones</a>
+                                <p class="price card-text">$9.990</p>
+                                <button class="btn-add-cart btn btn-primary">Añadir al carrito</button>
                             </div>
                         </div>
                         <!--Card 4-->
                         <div class="card Ccard" style="width: 14rem;">
                             <img class="card-img-top" src="img/Productos/Chapita-dorada-3cms-1_1024x1024@2x.webp" alt="Card image cap">
-                            <div class="card-body">
+                            <div class="info-product">
                                 <h5 class="card-title">Placa identificación 3 cm dorada</h5>
-                                <p class="card-text">$9.990</p>
-                                <a href="#" class="btn btn-primary">Ver opciones</a>
+                                <p class="price card-text">$9.990</p>
+                                <button class="btn-add-cart btn btn-primary">Añadir al carrito</button>
                             </div>
                         </div>
                         <!--Card 5-->
                         <div class="card Ccard" style="width: 14rem;">
                             <img class="card-img-top" src="img/Productos/placaovaladadorada.webp" alt="Card image cap">
-                            <div class="card-body">
+                            <div class="info-product">
                                 <h5 class="card-title">Placa identificación ovalada dorada</h5>
-                                <p class="card-text">$9.490</p>
-                                <a href="#" class="btn btn-primary">Ver opciones</a>
+                                <p class="price card-text">$9.490</p>
+                                <button class="btn-add-cart btn btn-primary">Añadir al carrito</button>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <!--Carrusel 2-->
-                <div class="carousel-item">
-                    <div class="carruselCard">
                         <!--Card 1-->
                         <div class="card Ccard" style="width: 14rem;">
                             <img class="card-img-top" src="img/Productos/MEXICANA_LUPITA_HUESO.webp" alt="Card image cap">
-                            <div class="card-body">
+                            <div class="info-product">
                                 <h5 class="card-title">PopTags - Mexicana</h5>
-                                <p class="card-text">$6.990</p>
-                                <a href="#" class="btn btn-primary">Ver opciones</a>
+                                <p class="price card-text">$6.990</p>
+                                <button class="btn-add-cart btn btn-primary">Añadir al carrito</button>
                             </div>
                         </div>
                         <!--Card 2-->
                         <div class="card Ccard" style="width: 14rem;">
                             <img class="card-img-top" src="img/Productos/CRISPI_ROSADO_HUESO.webp" alt="Card image cap">
-                            <div class="card-body">
+                            <div class="info-product">
                                 <h5 class="card-title">PopTags-Crispi</h5>
-                                <p class="card-text">$6.990</p>
-                                <a href="#" class="btn btn-primary">Ver opciones</a>
+                                <p class="price card-text">$6.990</p>
+                                <button class="btn-add-cart btn btn-primary">Añadir al carrito</button>
                             </div>
                         </div>
                         <!--Card 3-->
                         <div class="card Ccard" style="width: 14rem;">
                             <img class="card-img-top" src="img/Productos/Acero.webp" alt="Card image cap">
-                            <div class="card-body">
+                            <div class="info-product">
                                 <h5 class="card-title">Militar Acero Inox</h5>
-                                <p class="card-text">$5.990</p>
-                                <a href="#" class="btn btn-primary">Ver opciones</a>
+                                <p class="price card-text">$5.990</p>
+                                <button class="btn-add-cart btn btn-primary">Añadir al carrito</button>
                             </div>
                         </div>
                         <!--Card 4-->
                         <div class="card Ccard" style="width: 14rem;">
                             <img class="card-img-top" src="img/Productos/PopTags - Tie Dye.webp" alt="Card image cap">
-                            <div class="card-body">
+                            <div class="info-product">
                                 <h5 class="card-title">PopTags-Tie Dye</h5>
-                                <p class="card-text">$6.990</p>
-                                <a href="#" class="btn btn-primary">Ver opciones</a>
+                                <p class="price card-text">$6.990</p>
+                                <button class="btn-add-cart btn btn-primary">Añadir al carrito</button>
                             </div>
                         </div>
                         <!--Card 5-->
                         <div class="card Ccard" style="width: 14rem;">
                             <img class="card-img-top" src="img/Productos/Collar PetLover - Corgi.webp" alt="Card image cap">
-                            <div class="card-body">
+                            <div class="info-product">
                                 <h5 class="card-title">Collar PetLover-Corgi</h5>
-                                <p class="card-text">$9.990</p>
-                                <a href="#" class="btn btn-primary">Ver opciones</a>
+                                <p class="price card-textt">$9.990</p>
+                                <button class="btn-add-cart btn btn-primary">Añadir al carrito</button>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <!--Carrusel 3-->
-                <div class="carousel-item">
-                    <div class="carruselCard">
                         <!--Card 1-->
                         <div class="card Ccard" style="width: 14rem;">
                             <img class="card-img-top" src="img/Productos/MedallaPastorAleman.webp" alt="Card image cap">
-                            <div class="card-body">
+                            <div class="info-product">
                                 <h5 class="card-title">Medalla de identificación-Pastor Alemán</h5>
-                                <p class="card-text">$9.990</p>
-                                <a href="#" class="btn btn-primary">Ver opciones</a>
+                                <p class="price card-text">$9.990</p>
+                                <button class="btn-add-cart btn btn-primary">Añadir al carrito</button>
                             </div>
                         </div>
                         <!--Card 2-->
                         <div class="card Ccard" style="width: 14rem;">
                             <img class="card-img-top" src="img/Productos/PopTags-Starpaws.webp" alt="Card image cap">
-                            <div class="card-body">
+                            <div class="info-product">
                                 <h5 class="card-title">PopTags-Starpaws</h5>
                                 <p class="card-text">$6.990</p>
-                                <a href="#" class="btn btn-primary">Ver opciones</a>
+                                <button class="btn-add-cart btn btn-primary">Añadir al carrito</button>
                             </div>
                         </div>
                         <!--Card 3-->
                         <div class="card Ccard" style="width: 14rem;">
                             <img class="card-img-top" src="img/Productos/Placa Clásica Círculo Huella Negra.jpeg" alt="Card image cap">
-                            <div class="card-body">
+                            <div class="info-product">
                                 <h5 class="card-title">Placa Clásica Círculo Huella Negra</h5>
-                                <p class="card-text">$6.990</p>
-                                <a href="#" class="btn btn-primary">Ver opciones</a>
+                                <p class="price card-text">$6.990</p>
+                                <button class="btn-add-cart btn btn-primary">Añadir al carrito</button>
                             </div>
                         </div>
                         <!--Card 4-->
                         <div class="card Ccard" style="width: 14rem;">
                             <img class="card-img-top" src="img/Productos/burger_placa.jpg" alt="Card image cap">
-                            <div class="card-body">
+                            <div class="info-product">
                                 <h5 class="card-title">Placa Comida Burger</h5>
-                                <p class="card-text">$6.990</p>
-                                <a href="#" class="btn btn-primary">Ver opciones</a>
+                                <p class="price card-text">$6.990</p>
+                                <button class="btn-add-cart btn btn-primary">Añadir al carrito</button>
                             </div>
                         </div>
                         <!--Card 5-->
                         <div class="card Ccard" style="width: 14rem;">
                             <img class="card-img-top" src="img/Productos/Placa Charms Flor Margarita.jpeg" alt="Card image cap">
-                            <div class="card-body">
+                            <div class="info-product">
                                 <h5 class="card-title">Placa Charms Flor Margarita</h5>
-                                <p class="card-text">$6.990</p>
-                                <a href="#" class="btn btn-primary">Ver opciones</a>
+                                <p class="price card-text">$6.990</p>
+                                <button class="btn-add-cart btn btn-primary">Añadir al carrito</button>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+            </div>   
     </main>
     <!--Footer-->
     <footer>
