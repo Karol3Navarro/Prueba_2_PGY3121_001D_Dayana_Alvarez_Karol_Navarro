@@ -91,11 +91,8 @@ $(document).ready(function(){
         }
         alert("Compra exitosa");
       
-});
-});
-
-//Validacion contacto
-$(document).ready(function(){
+    });
+    //Validacion contacto
     $("#registrocontacto").submit(function(event){
         // Evitar que el formulario se envíe automáticamente
         event.preventDefault();
@@ -106,7 +103,7 @@ $(document).ready(function(){
         var archivo = $("#Archivo").val();
         var motivo = $("#Motivo").val();
         var descripcion= $("#Descripcion").val();
-       
+    
         if(nombrecom.length < 3 || nombrecom.length > 100 ){
             alert("El nombre debe tener entre 3 y 100 caracteres.");
             return;
@@ -132,15 +129,13 @@ $(document).ready(function(){
         alert("¡Registro exitoso!");
         // Aquí podrías enviar el formulario utilizando AJAX o cualquier otro método
     });
-});
-//Validacion Socio
-$(document).ready(function(){
-    $("#Socio").submit(function(event){
+    //Validacion Socio
+    $("#registroSocio").submit(function(event){
         // Evitar que el formulario se envíe automáticamente
         event.preventDefault();
         
         // Realizar las validaciones
-        var nombre = $("#nombrec").val();
+        var nombre = $("#nombre").val();
         var donacion = $("#donacion").val();
         var contacto = $("#contacto").val();
         var correo = $("#correo").val();
@@ -158,7 +153,7 @@ $(document).ready(function(){
             return;
         }
         if(contacto.length < 3 || contacto.length > 100 ){
-            alert("El contacto debe tener entre 3 y 100 caracteres.");
+            alert("El Telefono debe tener entre 9 y 10 caracteres.");
             return;
         }
         if(correo.length < 3 || correo.length > 100 ){
@@ -179,8 +174,10 @@ $(document).ready(function(){
         }
 
         // Si todas las validaciones pasan, se puede enviar el formulario
-        alert("¡Registro exitoso!");
+        alert("Felicidades, Ya eres socio");
         // Aquí podrías enviar el formulario utilizando AJAX o cualquier otro método
     });
 });
+
+
 
