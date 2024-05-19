@@ -289,7 +289,3 @@ function login(){
 		alert("Usuario incorrecto");
 	}
 };
-
-
-
-
