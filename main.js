@@ -254,29 +254,10 @@ function buscarProducto2() {
         }
     });
 }
-function buscarProducto() {
-    var input = document.querySelector('.search-input');
-    var filter = input.value.toLowerCase();
-    console.log('Buscando:', filter);
-    var found = false;
 
-    // Obtener la lista de productos desde localStorage
-    var products = JSON.parse(localStorage.getItem('products'));
-    console.log('Productos:', products);
 
-    products.forEach(function(product) {
-        if (product.id.toLowerCase().indexOf(filter) > -1) {
-            console.log('Producto encontrado:', product);
-            window.location.href = product.url;
-            found = true;
-            return;
-        }
-    });
 
-    if (!found) {
-        alert('Producto no encontrado');
-    }
-}
+
 
 //Funcion de Login
 function login(){
