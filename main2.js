@@ -50,22 +50,28 @@ $(document).ready(function(){
         var nombre = $("#inputnombre").val();
         var apellidos = $("#inputApellidos").val();
         var rut = $("#inputRut").val();
+        var correo = $("#correo").val();
         var celular = $("#inputtelefono").val();
         var direccion = $("#inputDireccion").val(); 
         var region = $("#region").val();
         var comuna = $("#comuna").val();
-        // Rut: largo entre 9 y 10 caracteres
-        if(rut.length < 9 || rut.length > 10){
-            alert("El Rut debe tener entre 9 y 10 caracteres.");
-            return;
-        }   
+       
 
         // Nombre, Apellidos: largo entre 3 y 20 caracteres
         if(nombre.length < 3 || nombre.length > 20 ||
             apellidos.length < 3 || apellidos.length > 20){
             alert("El Nombre y Apellido deben tener entre 3 y 20 caracteres.");
             return;
-        }   
+        }  
+         // Rut: largo entre 9 y 10 caracteres
+         if(rut.length < 9 || rut.length > 10){
+            alert("El Rut debe tener entre 9 y 10 caracteres.");
+            return;
+        }    
+        if(correo.length < 3 || correo.length > 100){
+            alert("El Email debe tener entre 3 y 100 caracteres.");
+            return;
+        }
 
         // Celular: largo entre 9 y 12 caracteres
         if(celular.length < 9 || celular.length > 12){
@@ -129,7 +135,7 @@ $(document).ready(function(){
         // Evitar que el formulario se envíe automáticamente
         event.preventDefault();
         
-        // Realizar las validaciones
+        // Realizar las validaciones socio
         var nombre = $("#nombre").val();
         var donacion = $("#donacion").val();
         var contacto = $("#contacto").val();
@@ -143,12 +149,12 @@ $(document).ready(function(){
             alert("El nombre debe tener entre 3 y 100 caracteres.");
             return;
         }
-        if(donacion.length < 3 || donacion.length > 100){
-            alert("El donacion debe tener entre 3 y 100 caracteres.");
+        if(donacion.length < 1 || donacion.length > 10 || isNaN(donacion)){
+            alert("La donación debe ser un valor numérico entre 1 y 10 caracteres.");
             return;
         }
-        if(contacto.length < 3 || contacto.length > 100 ){
-            alert("El Telefono debe tener entre 9 y 10 caracteres.");
+        if(contacto.length < 9 || contacto.length > 10 || isNaN(contacto)){
+            alert("El teléfono debe tener entre 9 y 10 caracteres numéricos.");
             return;
         }
         if(correo.length < 3 || correo.length > 100 ){
@@ -173,6 +179,3 @@ $(document).ready(function(){
         // Aquí podrías enviar el formulario utilizando AJAX o cualquier otro método
     });
 });
-
-
-
