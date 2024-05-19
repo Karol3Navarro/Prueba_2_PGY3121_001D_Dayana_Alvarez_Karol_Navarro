@@ -12,13 +12,11 @@
     <!--Barra principal-->
     <header> 
         <div class="contendorBoton">
-          
             <!--Logo-->
-            <div class="logo">
                 <center>
                     <a href="index.html"><img src="img/refugio-de-animales.png" alt="Bootstrap" height="80" width="80"></a>
                 </center>
-            </div>
+            
             <!--Login y Carrito-->
             <div class="btnCarritoLogin">
                 <!--Login-->
@@ -37,7 +35,8 @@
                                 <label for="password" class="form-label">Contraseña</label>
                                 <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
                             </div>
-                            <button type="submit" class="btn btn-primary btn-secondary">Iniciar sesión</button>
+                            <button type="submit" class="btn btn-primary btn-secondary" onclick="login()">Iniciar sesión</button><br>
+                            <a href="registro.html"type="submit" class="btn btn-primary btn-secondary">Registrar</a>
                         </form>
                     </div>
                 </div>
@@ -54,7 +53,6 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
 
@@ -82,7 +80,7 @@
                                 <img src="img/animales (1).png" alt="Adornos" style="height: 20px; margin-right: 5px;">Accesorios
                             </a>
                             <ul class="dropdown-menu" style="background-color:#7888AF;">
-                                <li><a class="dropdown-item" href="Nuevo_bandana.html" style="color: white;">Bandana</a></li>
+                                <li><a class="dropdown-item" href="bandana.html" style="color: white;">Bandana</a></li>
                                 <li><a class="dropdown-item" href="correa.html" style="color: white;">Correas</a></li>
                                 <li><a class="dropdown-item" href="identificacion.html" style="color: white;">Identificaciones</a></li>
                             </ul>
@@ -112,8 +110,6 @@
                 <div class="row-product hidden">
                     <div class="cart-product">
                         <div class="info-cart-product">
-                            <div class="contador">
-                               
                             <span class="cantidad-producto-carrito">1</span>
                             <p class="titulo-producto-carrito">Bandana Black Sheep</p>
                             <span class="precio-producto-carrito">$6.390</span>
@@ -122,7 +118,7 @@
                 </div>
                 <div class="cart-total hidden">
                     <h3>Total:</h3>
-                    <span class="total-pagar"></span>
+                    <span class="total-pagar">$200</span>
                     <div class="d-grid gap-2 col-6 mx-auto">
                         <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Finalizar compra
@@ -153,6 +149,7 @@
             </div>
         </div>
     </header>
+
     <main>
         <div class="filtros" >
             <h3>Filtros</h3>
