@@ -52,6 +52,8 @@ $(document).ready(function(){
         var rut = $("#inputRut").val();
         var celular = $("#inputtelefono").val();
         var direccion = $("#inputDireccion").val(); 
+        var region = $("#region").val();
+        var comuna = $("#comuna").val();
         // Rut: largo entre 9 y 10 caracteres
         if(rut.length < 9 || rut.length > 10){
             alert("El Rut debe tener entre 9 y 10 caracteres.");
@@ -74,7 +76,14 @@ $(document).ready(function(){
             alert("La direccion debe tener entre 9 y 10 caracteres.");
             return;
         }
-
+        if(region === ""){
+            alert("Seleccione una region");
+            return;
+        }
+        if(comuna === ""){
+            alert("Seleccione una comuna");
+            return;
+        }
         alert("Compra exitosa");
       
 });

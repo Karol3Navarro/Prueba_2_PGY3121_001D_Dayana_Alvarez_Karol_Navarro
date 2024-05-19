@@ -170,36 +170,30 @@
                 </div>
                 <div class="mb-3">
                     <label for="inputtelefono" class="form-label"style="font-weight: bold;">Telefono:</label>
-                    <input type="password" class="form-control form-control-sm" id="inputtelefono" style="width: 500px;">
+                    <input type="text" class="form-control form-control-sm" id="inputtelefono" style="width: 500px;">
                 </div>
                 <div class="mb-3">
                     <label for="inputDireccion" class="form-label" style="font-weight: bold;">Direccion:</label>
                     <input type="text" class="form-control form-control-sm" id="inputDireccion" style="width: 500px;">
                 </div> 
-                <!--
-                <p style="font-weight: bold;">Region:</p>
-                <select id="region" name="region" class="form-select form-select-sm" aria-label="Default select example" style="width: 500px;">
-                    <option selected>Selecione una Region</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>-->
                 <div class="mb-3">
                     <label for="region" class="form-label">Region:</label>
-                    <select id="region" name="region">
+                    <select id="region" name="region" class="form-select form-select-sm" aria-label="Default select example" style="width: 500px;">
                         <option value="">Selecione una Region</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
                       </select>
                 </div>
-                <p style="font-weight: bold;">Comuna:</p>
-                <select class="form-select form-select-sm" aria-label="Default select example" style="width: 500px;">
-                    <option selected>Selecione una Comuna</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select><br>
+                <div class="mb-3">
+                    <label for="comuna" class="form-label">Comuna:</label>
+                    <select id="comuna" name="comuna" class="form-select form-select-sm" aria-label="Default select example" style="width: 500px;">
+                        <option value="">Selecione una Comuna</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                </div><br>
                 <!--Boton principal-->
                 <button type="button" class="btn btn-primary ms-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Finalizar compra</button>
 
