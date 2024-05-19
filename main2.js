@@ -24,10 +24,10 @@ $(document).ready(function(){
             return;
         }
 
-        // Celular: largo entre 9 y 12 caracteres
-        if(celular.length < 9 || celular.length > 12){
-            alert("El Celular debe tener entre 9 y 12 caracteres.");
-            return;
+         // Celular: largo entre 9 y 12 caracteres
+         if(celular.length < 9 || celular.length > 12 || isNaN(celular)){
+            alert("El teléfono debe tener entre 9 y 12 caracteres numéricos.");
+            return; 
         }
 
         if(password.length < 5 || password.length > 12){
@@ -74,10 +74,10 @@ $(document).ready(function(){
         }
 
         // Celular: largo entre 9 y 12 caracteres
-        if(celular.length < 9 || celular.length > 12){
-            alert("El Celular debe tener entre 9 y 12 caracteres.");
-            return;
-        }   
+        if(celular.length < 9 || celular.length > 12 || isNaN(celular)){
+            alert("El teléfono debe tener entre 9 y 12 caracteres numéricos.");
+            return; 
+        }
         if(direccion.length < 9 || direccion.length > 10){
             alert("La direccion debe tener entre 9 y 10 caracteres.");
             return;
