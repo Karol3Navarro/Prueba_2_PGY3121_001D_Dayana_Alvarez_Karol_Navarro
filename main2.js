@@ -52,12 +52,8 @@ $(document).ready(function(){
         var rut = $("#inputRut").val();
         var celular = $("#inputtelefono").val();
         var direccion = $("#inputDireccion").val(); 
-<<<<<<< Updated upstream
         var region = $("#region").val();
         var comuna = $("#comuna").val();
-=======
-        var region = $("#region")
->>>>>>> Stashed changes
         // Rut: largo entre 9 y 10 caracteres
         if(rut.length < 9 || rut.length > 10){
             alert("El Rut debe tener entre 9 y 10 caracteres.");
@@ -137,3 +133,54 @@ $(document).ready(function(){
         // Aquí podrías enviar el formulario utilizando AJAX o cualquier otro método
     });
 });
+//Validacion Socio
+$(document).ready(function(){
+    $("#Socio").submit(function(event){
+        // Evitar que el formulario se envíe automáticamente
+        event.preventDefault();
+        
+        // Realizar las validaciones
+        var nombre = $("#nombrec").val();
+        var donacion = $("#donacion").val();
+        var contacto = $("#contacto").val();
+        var correo = $("#correo").val();
+        var fecha_ini= $("#fecha_ini").val();
+        var opcion= $("#opcion").val();
+        var mascota= $("#mascota").val();
+
+
+        if(nombre.length < 3 || nombre.length > 100 ){
+            alert("El nombre debe tener entre 3 y 100 caracteres.");
+            return;
+        }
+        if(donacion.length < 3 || donacion.length > 100){
+            alert("El donacion debe tener entre 3 y 100 caracteres.");
+            return;
+        }
+        if(contacto.length < 3 || contacto.length > 100 ){
+            alert("El contacto debe tener entre 3 y 100 caracteres.");
+            return;
+        }
+        if(correo.length < 3 || correo.length > 100 ){
+            alert("El contacto debe tener entre 3 y 100 caracteres.");
+            return;
+        }
+        if(fecha_ini === ""){
+            alert("Por favor, seleccione un archivo.");
+            return;
+        }
+        if(opcion === ""){
+            alert("Por favor, seleccione un motivo.");
+            return;
+        }
+        if(mascota.length < 3 || mascota.length > 100){
+            alert("El Descripción debe tener entre 3 y 100 caracteres.");
+            return;
+        }
+
+        // Si todas las validaciones pasan, se puede enviar el formulario
+        alert("¡Registro exitoso!");
+        // Aquí podrías enviar el formulario utilizando AJAX o cualquier otro método
+    });
+});
+

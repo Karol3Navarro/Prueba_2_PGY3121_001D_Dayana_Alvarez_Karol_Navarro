@@ -183,25 +183,25 @@
                     </div>
                     <div class="modal-body">
                         <div class="container-fluid">
-                            <form>
+                            <form id="Socio">
                                 <div class="row">
                                     <div class="form-group col-md-6">
                                         <label for="nombre">Nombre</label>
                                         <input type="text" class="form-control" id="nombre" required>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="descripcion">Monto a donar</label>
-                                        <input type="text" class="form-control" id="descripcion" required>
+                                        <label for="donacion">Monto a donar</label>
+                                        <input type="text" class="form-control" id="donacion" required>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-md-6">
-                                        <label for="observaciones">Telefono</label>
-                                        <input type="text" class="form-control" id="observaciones">
+                                        <label for="contacto">Telefono</label>
+                                        <input type="text" class="form-control" id="contacto">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="nombre">Email</label>
-                                        <input type="text" class="form-control" id="nombre" required>
+                                        <label for="correo">Email</label>
+                                        <input type="text" class="form-control" id="correo" required>
                                     </div>
                                     <div class="form-group col-md-3">
                                         <label for="fecha_ini">Fecha del deposito</label>
@@ -210,23 +210,23 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="nombre">Socio o Padrino</label>
-                                    <select class="form-select" aria-label="Default select example" style="width: 700px;">
-                                        <option selected>Seleccione una opcion</option>
+                                    <select class="form-select" aria-label="Default select example" style="width: 700px;" id="opcion" name="opcion">
                                         <option value="1">Socio</option>
                                         <option value="2">Padrino</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="nombre">Nombre de la mascota que desea adoptar o apadrinar</label>
-                                    <input type="text" class="form-control" id="nombre" required>
+                                    <label for="mascota">Nombre de la mascota que desea adoptar o apadrinar</label>
+                                    <input type="text" class="form-control" id="mascota" required>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                    <button type="submit" class="btn btn-primary">Ser socio</button>
                                 </div>
                             </form>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Ser socio</button>
-                    </div>
+                   
                 </div>
             </div>
         </div>
