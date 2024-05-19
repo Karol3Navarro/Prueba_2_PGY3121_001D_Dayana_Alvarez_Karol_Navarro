@@ -52,8 +52,12 @@ $(document).ready(function(){
         var rut = $("#inputRut").val();
         var celular = $("#inputtelefono").val();
         var direccion = $("#inputDireccion").val(); 
+<<<<<<< Updated upstream
         var region = $("#region").val();
         var comuna = $("#comuna").val();
+=======
+        var region = $("#region")
+>>>>>>> Stashed changes
         // Rut: largo entre 9 y 10 caracteres
         if(rut.length < 9 || rut.length > 10){
             alert("El Rut debe tener entre 9 y 10 caracteres.");
@@ -65,7 +69,12 @@ $(document).ready(function(){
             apellidos.length < 3 || apellidos.length > 20){
             alert("El Nombre y Apellido deben tener entre 3 y 20 caracteres.");
             return;
-        }    
+        }   
+        
+        if(region === ""){
+            alert("Por favor, seleccione un archivo.");
+            return;
+        }
 
         // Celular: largo entre 9 y 12 caracteres
         if(celular.length < 9 || celular.length > 12){
@@ -87,4 +96,44 @@ $(document).ready(function(){
         alert("Compra exitosa");
       
 });
+});
+
+//Validacion contacto
+$(document).ready(function(){
+    $("#registrocontacto").submit(function(event){
+        // Evitar que el formulario se envíe automáticamente
+        event.preventDefault();
+        
+        // Realizar las validaciones
+        var nombrecom = $("#Nombrecom").val();
+        var correo = $("#correo").val();
+        var archivo = $("#Archivo").val();
+        var motivo = $("#Motivo").val();
+        var descripcion= $("#Descripcion").val();
+       
+        if(nombrecom.length < 3 || nombrecom.length > 100 ){
+            alert("El nombre debe tener entre 3 y 100 caracteres.");
+            return;
+        }
+        if(correo.length < 3 || correo.length > 100){
+            alert("El Email debe tener entre 3 y 100 caracteres.");
+            return;
+        }
+        if(archivo === ""){
+            alert("Por favor, seleccione un archivo.");
+            return;
+        }
+        if(motivo === ""){
+            alert("Por favor, seleccione un motivo.");
+            return;
+        }
+        if(descripcion.length < 3 || descripcion.length > 100){
+            alert("El Descripción debe tener entre 3 y 100 caracteres.");
+            return;
+        }
+
+        // Si todas las validaciones pasan, se puede enviar el formulario
+        alert("¡Registro exitoso!");
+        // Aquí podrías enviar el formulario utilizando AJAX o cualquier otro método
+    });
 });

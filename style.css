@@ -196,3 +196,37 @@ img{
 .hidden{
     display: none;
 }
+.filtros {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+
+
+
+.botones {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.btnBuscar {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 10px; }
+
+.btnBuscar button {
+    background: none; /* Elimina el fondo del botón */
+    border: none; /* Elimina el borde del botón */
+    padding: 0; /* Elimina el padding del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.search-input {
+    margin-left: 10px; /* Espacio entre el botón y el input */
+}
+
+button.btn {
+    margin-bottom: 10px; /* Espacio entre los botones */
+}
